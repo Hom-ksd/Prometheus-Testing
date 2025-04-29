@@ -243,7 +243,7 @@ kubectl port-forward svc/kube-prometheus-stack-prometheus -n monitoring 9090:909
 
     - ถ้าหากแสดงว่า never หรือเป็นเวลานานแล้ว แสดงว่าอาจมีปัญหาในการดึงข้อมูล
 
-![Prometheus-target](images\Prometheus-target.png)
+![Prometheus-target](images/Prometheus-target.png)
 
 ทำ Port Forwarding สำหรับ Grafana เพื่อแสดงข้อมูลบน Dashboard
 
@@ -255,7 +255,7 @@ kubectl  port-forward service/kube-prometheus-stack-grafana -n prometheus 8080:8
 
 หลังจากนั้นทำการเข้าหน้าเว็ปไซต์ผ่าน `http://localhost:8080`
 
-![Grafana-Login](images\Grafana-Login.png)
+![Grafana-Login](images/Grafana-Login.png)
 
 ทำการ Login โดย Default username และ password ของ Gragana คือ
 ```
@@ -269,14 +269,14 @@ kubectl get secret --namespace monitoring kube-prometheus-stack-grafana -o jsonp
 ```
 จากนั้นให้เข้าหน้า Dashboard เพื่อทำการสร้าง Dashboard สำหรับ Target ที่เราต้องการ
 
-![Grafana-dashboard](images\Grafana-dashboard.png)
+![Grafana-dashboard](images/Grafana-dashboard.png)
 
 เนื่องจากในการทดสอบครั้งนี้เป็นการใช้ Prometheus จึงเลือก Template เป็น Prometheus
 
-![Grafana-Selecttemplate](images\Grafana-Selecttemplate.png)
+![Grafana-Selecttemplate](images/Grafana-Selecttemplate.png)
 
 จากนั้นทำการเลือก Metric ข้อมูลที่เราต้องการจะใช้
 
-![Grafans-SelectMetric](images\Grafans-SelectMetric.png)
+![Grafans-SelectMetric](images/Grafans-SelectMetric.png)
 
 ในตัวอย่างครั้งนี้เป็น PostgreSQL metric ที่เลือกจะเป็น `pg_stat_database_tup_inserted` เป็นตัวอย่างในการแสดงผล
